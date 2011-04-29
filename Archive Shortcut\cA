@@ -1,1 +1,18 @@
-(*	Entaurage Archive Shortcut*)tell application "Microsoft Entourage"	try		set theMessages to current messages		set thisAccount to Exchange account "YOUR ACCOUNT NAME"		set inboxFolder to folder "Inbox" of thisAccount			on error		display dialog "select some messages before running this script."		return	end try	try		move theMessages to folder "Archive" of inboxFolder			on error		display dialog "An error occurred and the messages were not moved."		return	end tryend tell
+tell application "Microsoft Entourage"
+	try
+		set theMessages to current messages
+		set thisAccount to Exchange account "YOUR ACCOUNT NAME"
+		set inboxFolder to folder "Inbox" of thisAccount
+		
+	on error
+		display dialog "select some messages before running this script."
+		return
+	end try
+	try
+		move theMessages to folder "Archive" of inboxFolder
+		
+	on error
+		display dialog "An error occurred and the messages were not moved."
+		return
+	end try
+end tell
