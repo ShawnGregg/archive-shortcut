@@ -1,15 +1,17 @@
-tell application "Microsoft Entourage"
+(*
+	Microsoft Outlook Archive Shortcut
+	Saves selected message to the Archive folder in your Exchange inbox
+*)
+
+tell application "Microsoft Outlook"
 	try
 		set theMessages to current messages
-		set thisAccount to Exchange account "YOUR ACCOUNT NAME"
-		set inboxFolder to folder "Inbox" of thisAccount
-		
 	on error
 		display dialog "select some messages before running this script."
 		return
 	end try
 	try
-		move theMessages to folder "Archive" of inboxFolder
+		move theMessages to folder "Archive"
 		
 	on error
 		display dialog "An error occurred and the messages were not moved."

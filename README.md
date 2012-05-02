@@ -3,6 +3,5 @@ Setup
 -------
 
 * Open with script editor
-* Update "YOUR ACCOUNT NAME" with your account name
-* Compile and save in ~/Documents/Microsoft User Data/Entourage Script Menu Items/
-* Script should now appear in Entourage's scripts menu with crtl+a as the default shortcut
+* Compile and save in ~/Documents/Microsoft User Data/Outlook Script Menu Items/
+* Scripts should now appear in Outlook's scripts menu with crtl+a and crtl+s as the default shortcuts
