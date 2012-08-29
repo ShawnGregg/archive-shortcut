@@ -11,7 +11,9 @@ tell application "Microsoft Outlook"
 		return
 	end try
 	try
-		move theMessages to folder "Archive"
+	repeat with theMessage in theMessages
+    	move theMessage to folder "Archive"
+	end repeat
 		
 	on error
 		display dialog "An error occurred and the messages were not moved."
